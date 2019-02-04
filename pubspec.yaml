@@ -1,5 +1,5 @@
 name: flutter_blocs
-description: A new Flutter project.
+description: Demo Flutter app on BLoCs.
 
 version: 1.0.0+1
 
@@ -11,6 +11,11 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^0.1.2
+  meta: ^1.1.7
+
+  equatable: 0.1.6
+  bloc: ^0.8.2
+  flutter_bloc: ^0.5.3
 
 dev_dependencies:
   flutter_test:
