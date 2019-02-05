@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:meta/meta.dart';
 import 'package:rxdart/rxdart.dart';
 
-import 'package:flutter_blocs/src/blocs/common/blocs.dart' show Disposable;
+import 'package:flutter_blocs/src/blocs/blocs.dart' show Disposable;
 
 abstract class Event {}
 

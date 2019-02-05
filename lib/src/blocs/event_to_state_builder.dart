@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_blocs/src/blocs/common/blocs.dart'
-    show Event, EventToState;
+import 'package:flutter_blocs/src/blocs/blocs.dart' show Event, EventToState;
 
 typedef Widget AsyncStateBuilder<State>(BuildContext context, State state);
 
-class EventStateBuilder<State> extends StatelessWidget {
-  const EventStateBuilder({
+class EventToStateBuilder<State> extends StatelessWidget {
+  const EventToStateBuilder({
     Key key,
     @required this.builder,
     @required this.bloc,

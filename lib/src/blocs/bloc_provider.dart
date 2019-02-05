@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 
-import 'package:flutter_blocs/src/blocs/common/blocs.dart' show Provider;
+import 'package:flutter_blocs/src/blocs/blocs.dart' show Provider;
 
 class BlocProvider<B> extends StatefulWidget {
   final B Function(BuildContext context, B bloc) builder;
