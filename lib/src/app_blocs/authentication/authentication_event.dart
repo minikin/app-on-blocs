@@ -1,17 +1,17 @@
 import 'package:flutter_blocs/src/blocs/blocs.dart' show Event;
 
 abstract class AuthenticationEvent extends Event {
-  final String name;
+  final String token;
 
   AuthenticationEvent({
-    this.name = '',
+    this.token = '',
   });
 }
 
 class AuthenticationEventLogin extends AuthenticationEvent {
-  AuthenticationEventLogin({String name})
+  AuthenticationEventLogin({String token})
       : super(
-          name: name,
+          token: token,
         );
 }
 

@@ -13,13 +13,13 @@ abstract class EventToState<Event, State> implements Disposable {
   PublishSubject<Event> _eventController = PublishSubject<Event>();
   BehaviorSubject<State> _stateController = BehaviorSubject<State>();
 
-  // To be invoked to emit an event
+  /// To be invoked to emit an event
   Function(Event) get emitEvent => _eventController.sink.add;
 
-  // Current/New state
+  /// Current/New state
   Stream<State> get state => _stateController.stream;
 
-  // Last State
+  /// Last State
   State get lastState => _stateController.value;
 
   /// External processing of the event

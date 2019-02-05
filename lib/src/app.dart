@@ -10,3 +10,16 @@ class App extends StatelessWidget {
     );
   }
 }
+
+class AppTwo extends StatefulWidget {
+  _AppTwoState createState() => _AppTwoState();
+}
+
+class _AppTwoState extends State<AppTwo> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: SignIn(),
+    );
+  }
+}
