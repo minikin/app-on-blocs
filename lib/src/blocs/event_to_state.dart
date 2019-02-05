@@ -5,9 +5,9 @@ import 'package:rxdart/rxdart.dart';
 
 import 'package:flutter_blocs/src/blocs/blocs.dart' show Disposable;
 
-abstract class Event {}
+abstract class BlocEvent {}
 
-abstract class State {}
+abstract class BlocState {}
 
 abstract class EventToState<Event, State> implements Disposable {
   PublishSubject<Event> _eventController = PublishSubject<Event>();

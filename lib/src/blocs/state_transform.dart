@@ -4,7 +4,7 @@ import 'package:rxdart/rxdart.dart';
 import 'package:flutter_blocs/src/blocs/blocs.dart';
 
 /// Based class used for the transformation of a states
-abstract class StateTransform<T, S extends State> implements Disposable {
+abstract class StateTransform<T, S extends BlocState> implements Disposable {
   /// Initial State
   final T initialState;
 
@@ -18,12 +18,12 @@ abstract class StateTransform<T, S extends State> implements Disposable {
   /// Constructor
   StateTransform({
     @required this.initialState,
-    @required EventToState<Event, State> blocIn,
+    @required EventToState<BlocEvent, BlocState> blocIn,
   }) {
     assert(blocIn != null);
-    assert(blocIn is StateTransform<Event, State>);
+    assert(blocIn is StateTransform<BlocEvent, BlocState>);
 
-    blocIn.state.listen((State stateIn) {
+    blocIn.state.listen((BlocState stateIn) {
       T currentState = _stateController.value ?? initialState;
 
       stateHandler(currentState: currentState, newState: stateIn)

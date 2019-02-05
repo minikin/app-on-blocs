@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart' hide State;
+import 'package:flutter/material.dart';
 
 import 'package:flutter_blocs/src/blocs/blocs.dart'
-    show State, StateTransform, AsyncStateBuilder;
+    show BlocState, StateTransform, AsyncStateBuilder;
 
-class StateTransformBuilder<T, S extends State> extends StatelessWidget {
+class StateTransformBuilder<T, S extends BlocState> extends StatelessWidget {
   const StateTransformBuilder({
     Key key,
     @required this.builder,

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_blocs/src/blocs/blocs.dart' show Event, EventToState;
+import 'package:flutter_blocs/src/blocs/blocs.dart'
+    show BlocEvent, EventToState;
 
-typedef Widget AsyncStateBuilder<State>(BuildContext context, State state);
+typedef Widget AsyncStateBuilder<BlocState>(
+    BuildContext context, BlocState state);
 
-class EventToStateBuilder<State> extends StatelessWidget {
+class EventToStateBuilder<BlocState> extends StatelessWidget {
   const EventToStateBuilder({
     Key key,
     @required this.builder,
@@ -13,15 +15,15 @@ class EventToStateBuilder<State> extends StatelessWidget {
         assert(bloc != null),
         super(key: key);
 
-  final EventToState<Event, State> bloc;
-  final AsyncStateBuilder<State> builder;
+  final EventToState<BlocEvent, BlocState> bloc;
+  final AsyncStateBuilder<BlocState> builder;
 
   @override
   Widget build(BuildContext context) {
-    return StreamBuilder<State>(
+    return StreamBuilder<BlocState>(
       stream: bloc.state,
       initialData: bloc.initialState,
-      builder: (BuildContext context, AsyncSnapshot<State> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<BlocState> snapshot) {
         return builder(context, snapshot.data);
       },
     );
