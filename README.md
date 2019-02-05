@@ -1,1 +1,1 @@
-# Demo Flutter app on BloCs
+# Demo flutter app on BLoCs
