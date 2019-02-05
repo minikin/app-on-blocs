@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
-class SplashPage extends StatelessWidget {
+class Splash extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.blue[100],
+      backgroundColor: Colors.white,
       body: Center(
-        child: Text('Splash Screen'),
+        child: Text(
+          'Splash Screen',
+          style: TextStyle(
+            fontSize: 32,
+            color: Colors.blue,
+          ),
+        ),
       ),
     );
   }

@@ -1,25 +1,19 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_blocs/src/screens/sign_in.dart';
+import 'package:flutter_blocs/src/screens/home.dart';
+import 'package:flutter_blocs/src/screens/splash.dart';
 
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SignIn(),
-    );
-  }
-}
-
-class AppTwo extends StatefulWidget {
-  _AppTwoState createState() => _AppTwoState();
-}
-
-class _AppTwoState extends State<AppTwo> {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: SignIn(),
+      home: Splash(),
+      routes: {
+        '/decision': (BuildContext context) => Splash(),
+        '/sign_in': (BuildContext context) => SignIn(),
+        '/home': (BuildContext context) => Home(),
+      },
     );
   }
 }
