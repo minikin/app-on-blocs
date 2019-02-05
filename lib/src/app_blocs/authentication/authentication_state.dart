@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
-import 'package:flutter_blocs/src/blocs/blocs.dart' show State;
+import 'package:flutter_blocs/src/blocs/blocs.dart' show BlocState;
 
-class AuthenticationState extends State {
+class AuthenticationState extends BlocState {
   final bool authenticated;
   final bool authenticating;
   final bool failedToAuthenticated;
