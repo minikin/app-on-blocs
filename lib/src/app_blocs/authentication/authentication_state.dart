@@ -1,6 +1,13 @@
 import 'package:meta/meta.dart';
 import 'package:flutter_blocs/src/blocs/blocs.dart' show BlocState;
 
+enum AuthenticationState111  {
+  authenticated,
+  authenticating,
+  failed,
+  unknow
+}
+
 class AuthenticationState extends BlocState {
   final bool authenticated;
   final bool authenticating;

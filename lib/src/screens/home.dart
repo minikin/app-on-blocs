@@ -8,11 +8,15 @@ class Home extends StatelessWidget {
         title: Text('Home'),
       ),
       body: Container(
-        child: Center(
-          child: RaisedButton(
-            child: Text('logout'),
-            onPressed: () {},
-          ),
+        child: Column(
+          children: <Widget>[
+            Center(
+              child: RaisedButton(
+                child: Text('logout'),
+                onPressed: () {},
+              ),
+            ),
+          ],
         ),
       ),
     );
